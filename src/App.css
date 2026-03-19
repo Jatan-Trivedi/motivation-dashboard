@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  min-height: 90vh;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 6px;
+  font-size: 30px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 22px;
+}
+
+.quote-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 22px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.quote-text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.author-text {
+  text-align: right;
+  color: #cbd5f5;
+  font-weight: bold;
+}
+
+.loading-text,
+.empty-text {
+  text-align: center;
+  color: #94a3b8;
+}
+
+.error-text {
+  text-align: center;
+  color: #f87171;
+  font-weight: bold;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+}
+
+.like-btn {
+  background: rgba(255,255,255,0.1);
+  color: #e2e8f0;
+}
+
+.like-btn.liked {
+  background: rgba(255, 0, 100, 0.25);
+  color: #fda4af;
+  font-weight: bold;
+}
+
+.stats {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.search-box {
+  margin-top: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.search-box input:focus {
+  outline: 2px solid #3b82f6;
+}
+
+.liked-section {
+  margin-top: 24px;
+}
+
+.liked-section h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.liked-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.liked-item {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255,255,255,0.05);
+  transition: 0.2s ease;
+}
+
+.liked-item:hover {
+  transform: scale(1.02);
+}
+
+.liked-quote {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.liked-author {
+  text-align: right;
+  color: #cbd5f5;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .quote-text {
+    font-size: 18px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .container {
+    padding: 18px;
+  }
+}
